@@ -9,7 +9,7 @@
 - **Description**: This project aims to create a custom implementation of the printf function in C, named `_printf`, which replicates the functionality of the standard printf function.
 
 ## Example usage
-![code](https://imgur.com/a/ONLRnYq)
+![code](https://preview.redd.it/code-for-readme-v0-lvnw7g8p6xqc1.png?auto=webp&s=a148a318f393898e060f05f4066a6bed81630846)
 
 
 
