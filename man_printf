@@ -1,0 +1,112 @@
+_printf(3)                     User Commands                    _printf(3)
+
+NAME
+       _printf - Custom printf implementation
+
+SYNOPSIS
+       #include <main.h>
+
+       int _printf(const char *format, ...);
+
+       int printf_37(void);
+       int printf_HEX(va_list val);
+       int printf_HEX_aux(unsigned int num);
+       int printf_hex(va_list val);
+       int printf_hex_aux(unsigned long int num);
+       int printf_oct(va_list val);
+       int printf_unsigned(va_list args);
+       int printf_bin(va_list val);
+       int printf_srev(va_list args);
+       int printf_rot13(va_list args);
+       int printf_int(va_list args);
+       int printf_dec(va_list args);
+       int printf_string(va_list val);
+       int printf_pointer(va_list val);
+       int _strlen(char *s);
+       int _strlenc(const char *s);
+       int _putchar(char c);
+
+DESCRIPTION
+       _printf is a custom implementation of the printf function in C.
+       It provides similar functionality to the standard printf function.
+
+FUNCTIONS
+       - _printf(const char *format, ...): This function prints formatted output
+         to the standard output according to the format string format.
+
+       - printf_37(): Prints the character '%' to the standard output.
+
+       - printf_HEX(va_list val): Prints an unsigned integer as a hexadecimal
+         number to the standard output.
+
+       - printf_HEX_aux(unsigned int num): Helper function for printf_HEX.
+
+       - printf_hex(va_list val): Prints an unsigned integer as a lowercase
+         hexadecimal number to the standard output.
+
+       - printf_hex_aux(unsigned long int num): Helper function for printf_hex.
+
+       - printf_oct(va_list val): Prints an unsigned integer as an octal number
+         to the standard output.
+
+       - printf_unsigned(va_list args): Prints an unsigned integer to the standard
+         output.
+
+       - printf_bin(va_list val): Prints an unsigned integer as a binary number
+         to the standard output.
+
+       - printf_srev(va_list args): Prints a string in reverse to the standard output.
+
+       - printf_rot13(va_list args): Prints a string encoded in ROT13 to the standard
+         output.
+
+       - printf_int(va_list args): Prints a signed integer to the standard output.
+
+       - printf_dec(va_list args): Prints a signed decimal number to the standard
+         output.
+
+       - printf_string(va_list val): Prints a string to the standard output.
+
+       - printf_pointer(va_list val): Prints the hexadecimal representation of
+         a pointer to the standard output.
+
+       - _strlen(char *s): Returns the length of a string.
+
+       - _strlenc(const char *s): Returns the length of a constant string.
+
+       - _putchar(char c): Writes a single character to the standard output.
+
+RETURN VALUE
+       Each function returns the number of characters printed.
+
+EXAMPLES
+       Example usage of _printf function:
+
+           #include <stdio.h>
+           #include <main.h>
+
+           int main() {
+               _printf("%s\n", "Hello, world!");
+               _printf("%d\n", 42);
+               return 0;
+           }
+
+SEE ALSO
+       printf(3), sprintf(3), fprintf(3)
+
+AUTHOR
+       Sebastian Soto, William Pellot
+
+COPYRIGHT
+       Copyright © 2024 Your Organization. License GPLv3+: GNU GPL version 3 or
+       later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it. There
+       is NO WARRANTY, to the extent permitted by law.
+
+BUGS
+       Report bugs to 9042@holbertonstudents.com.
+
+VERSION
+       This man page corresponds to _printf version 1.0.
+
+
