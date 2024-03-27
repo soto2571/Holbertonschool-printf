@@ -15,6 +15,7 @@ int printf_string(va_list val)
 	{
 		s = "(null)";
 		len = _strlen(s);
+		/** imprime cada caracter del string */
 		for (i = 0; i < len; i++)
 			_putchar(s[i]);
 		return (len);
@@ -22,6 +23,7 @@ int printf_string(va_list val)
 	else
 	{
 		len = _strlen(s);
+		/** imprime cada caracter del string */
 		for (i = 0; i < len; i++)
 			_putchar(s[i]);
 		return (len);

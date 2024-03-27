@@ -13,6 +13,7 @@ int printf_hex(va_list val)
 	unsigned int num = va_arg(val, unsigned int);
 	unsigned int temp = num;
 
+	/** calcula el numero de digitos hexadecimales en el numero */
 	while (num / 16 != 0)
 	{
 		num /= 16;
@@ -21,11 +22,13 @@ int printf_hex(va_list val)
 	counter++;
 	array = malloc(counter * sizeof(int));
 
+	/** guarda los hexadecimales en el array */
 	for (i = 0; i < counter; i++)
 	{
 		array[i] = temp % 16;
 		temp /= 16;
 	}
+	/** imprime los digits hexadecimales en reversa */
 	for (i = counter - 1; i >= 0; i--)
 	{
 		if (array[i] > 9)

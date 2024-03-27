@@ -10,7 +10,7 @@ int printf_unsigned(va_list args)
 	int num, last = n % 10, digit, exp = 1;
 	int  i = 1;
 
-	n = n / 10;
+	n = n / 10; /** elimina el ultimo digito del numero */
 	num = n;
 
 	if (last < 0)
@@ -38,7 +38,7 @@ int printf_unsigned(va_list args)
 			i++;
 		}
 	}
-	_putchar(last + '0');
+	_putchar(last + '0'); /** imprime el ultimo digito */
 
-	return (i);
+	return (i); /** devolve el numero de caracteres impresos */
 }

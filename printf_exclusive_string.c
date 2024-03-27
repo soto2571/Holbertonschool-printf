@@ -1,4 +1,4 @@
-#include "main.h"
+include "main.h"
 /**
  * printf_exclusive_string - print exclusuives string.
  * @val: argumen t.
@@ -16,7 +16,7 @@ int printf_exclusive_string(va_list val)
 		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] < 32 || s[i] >= 127)
+		if (s[i] < 32 || s[i] >= 127) /** verifica si char se puede imprimir */
 		{
 			_putchar('\\');
 			_putchar('x');
@@ -29,7 +29,7 @@ int printf_exclusive_string(va_list val)
 			}
 			len = len + printf_HEX_aux(cast);
 		}
-		else
+		else /** si el character se puede imprimir */
 		{
 			_putchar(s[i]);
 			len++;

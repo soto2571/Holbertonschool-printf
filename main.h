@@ -20,7 +20,7 @@ typedef struct format
 {
 	char *id;
 	int (*f)();
-} convert_match;
+} convert_match;/** forma de asociar especificadores con sus funciones */
 
 int printf_pointer(va_list val);
 int printf_hex_aux(unsigned long int num);
