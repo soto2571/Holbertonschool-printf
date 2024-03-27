@@ -1,5 +1,5 @@
 
-In this README.md file:
+![Holberton Logo](https://uploads-ssl.webflow.com/6105315644a26f77912a1ada/63eea844ae4e3022154e2878_Holberton.png)
 
 - **printf Project**: This is a replicate of the printf command.
 - **Prototype**: int _printf(const char *format, ...);.
