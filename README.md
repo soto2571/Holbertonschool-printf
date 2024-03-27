@@ -25,6 +25,10 @@ For questions, feedback, or inquiries, feel free to contact us:
   - GitHub: [github.com/william-pellot](https://github.com/will6z)
   - Email: 9041@holbertonstudents.com
 
+![Picture of William](https://preview.redd.it/tiecvm4q8xqc1.png?auto=webp&s=a82f1a6f3f52d65bc5ee4aceaad5f5eae4142ee4)
+
 - **Sebastian Soto**
   - GitHub: [github.com/sebastian-soto](https://github.com/soto2571)
   - Email: 9042@holbertonstudents.com
+
+![Picture of sebastian](https://preview.redd.it/6k6tf1a78xqc1.png?width=640&crop=smart&auto=webp&s=0aa19cdfd87fdf0bcae150e4b29bf5d5c6ed43af)
