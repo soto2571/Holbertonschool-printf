@@ -16,6 +16,3 @@ int main(void)
 }
 .
 - **Contributors**: William Pellot, Sebastian Soto.
-
-Feel free to customize and expand this template with additional sections or information specific to your project. Adding sections like Installation, Features, How to Contribute, Testing, etc., can provide more comprehensive documentation for users and contributors.
-
