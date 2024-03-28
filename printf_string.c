@@ -13,17 +13,17 @@ int printf_string(va_list val)
 	s = va_arg(val, char *);
 	if (s == NULL)
 	{
+		/**printea "(null)" si el string es NULL*/
 		s = "(null)";
 		len = _strlen(s);
-		/** imprime cada caracter del string */
 		for (i = 0; i < len; i++)
 			_putchar(s[i]);
 		return (len);
 	}
 	else
 	{
+		/** printea el string de char*/
 		len = _strlen(s);
-		/** imprime cada caracter del string */
 		for (i = 0; i < len; i++)
 			_putchar(s[i]);
 		return (len);

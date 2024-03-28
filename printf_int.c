@@ -6,6 +6,7 @@
  */
 int printf_int(va_list args)
 {
+	/**Recopila los int the el args list*/
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
 	int  i = 1;
@@ -22,26 +23,28 @@ int printf_int(va_list args)
 		last = -last;
 		i++;
 	}
+	/**Printea cada numero de int*/
 	if (num > 0)
 	{
+		/** Determina la magnitud del numero a la 10 */
 		while (num / 10 != 0)
 		{
 			exp = exp * 10;
 			num = num / 10;
 		}
+		/** Resetea num al numero original positivo*/
 		num = n;
 		while (exp > 0)
 		{
 			digit = num / exp;
-			_putchar(digit + '0');
+			_putchar(digit + '0'); /**printea el digito*/
 			num = num - (digit * exp);
 			exp = exp / 10;
 			i++;
 		}
 	}
-	_putchar(last + '0');
-	/* retorna la cantidad de numeros imprimidos */
-	return (i);
+	_putchar(last + '0'); /**printea el ultimo digito*/
+	return (i); /** retorna la cantidad de caracteres printeados*/
 }
 
 /**
@@ -68,6 +71,7 @@ int printf_dec(va_list args)
 		last = -last;
 		i++;
 	}
+
 	if (num > 0)
 	{
 		while (num / 10 != 0)
@@ -85,7 +89,7 @@ int printf_dec(va_list args)
 			i++;
 		}
 	}
-	_putchar(last + '0');
+	_putchar(last + '0'); /**printea el ultimo digito*/
 
-	return (i);
+	return (i); /**retorna el numero de caracteres printeados*/
 }

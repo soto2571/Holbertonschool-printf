@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * printf_hex - prints an hexgecimal number.
- * @val: arguments.
+ * printf_hex - Prints an unsigned integer as a lowercase hexadecimal
+ * number to the standard output.
+ * @val: arguments containing the unsigned integer to print.
  * Return: counter.
  */
 int printf_hex(va_list val)
@@ -13,13 +14,13 @@ int printf_hex(va_list val)
 	unsigned int num = va_arg(val, unsigned int);
 	unsigned int temp = num;
 
-	/** calcula el numero de digitos hexadecimales en el numero */
+	/** Determina la cantidad de numeros en representacion hexadecimal*/
 	while (num / 16 != 0)
 	{
 		num /= 16;
 		counter++;
 	}
-	counter++;
+	counter++; /**incrementa por el ultimo digito */
 	array = malloc(counter * sizeof(int));
 
 	/** guarda los hexadecimales en el array */
@@ -28,12 +29,12 @@ int printf_hex(va_list val)
 		array[i] = temp % 16;
 		temp /= 16;
 	}
-	/** imprime los digits hexadecimales en reversa */
+	/** imprime los digitos hexadecimales*/
 	for (i = counter - 1; i >= 0; i--)
 	{
 		if (array[i] > 9)
-			array[i] = array[i] + 39;
-		_putchar(array[i] + '0');
+			array[i] = array[i] + 39; /**convierte con ASCII*/
+		_putchar(array[i] + '0'); /**printea los digitos*/
 	}
 	free(array);
 	return (counter);

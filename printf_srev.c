@@ -2,7 +2,7 @@
 
 /**
  * printf_srev - function that prints a str in reverse
- * @args: type struct va_arg where is allocated printf arguments
+ * @args: The arg containing the string to print in reverse
  *
  * Return: the string
  */
@@ -15,8 +15,12 @@ int printf_srev(va_list args)
 
 	if (s == NULL)
 		s = "(null)";
+
+	/** calcula el len del string */
 	while (s[j] != '\0')
 		j++;
+
+	/** printea el string al reves */
 	for (i = j - 1; i >= 0; i--)
 		_putchar(s[i]);
 	return (j);

@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * printf_oct - prints an octal number.
- * @val: arguments.
+ * printf_oct - Prints an unsigned integer as an octal number to the standard
+ * output.
+ * @val: arguments containing the unsigned int.
  * Return: counter.
  */
 int printf_oct(va_list val)
@@ -19,7 +20,7 @@ int printf_oct(va_list val)
 		num /= 8;
 		counter++;
 	}
-	counter++;
+	counter++; /**incrementa por el ultimo digito*/
 	array = malloc(counter * sizeof(int));
 
 	/** calcula y guarda cada digito octal en el array */
@@ -28,10 +29,10 @@ int printf_oct(va_list val)
 		array[i] = temp % 8;
 		temp /= 8;
 	}
-	/** imprime cada digito del numero octal en reversa */
+	/** imprime cada digito del numero octal */
 	for (i = counter - 1; i >= 0; i--)
 	{
-		_putchar(array[i] + '0');
+		_putchar(array[i] + '0'); /** printea el digito*/
 	}
 	free(array);
 	return (counter);

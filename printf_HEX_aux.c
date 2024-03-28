@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * printf_HEX_aux - prints an hexgecimal number.
- * @num: number to print.
+ * printf_HEX_aux - prints an hexgecimal number this is a helper
+ * function for printf_HEX.
+ * @num: number to print in HEX.
  * Return: counter.
  */
 int printf_HEX_aux(unsigned int num)
@@ -18,21 +19,21 @@ int printf_HEX_aux(unsigned int num)
 		num /= 16;
 		counter++;
 	}
-	counter++;
+	counter++; /**incrementa por el ultimo digito*/
 	array = malloc(counter * sizeof(int));
 
-	/** cuenta  el numero de digitos hexadecimales necesitados */
+	/**Llena el array con los numeros hexadecimales */
 	for (i = 0; i < counter; i++)
 	{
 		array[i] = temp % 16;
 		temp /= 16;
 	}
-	/** imprime el digito hexadecimal guardado en el array en reversa */
+	/** Printea los numeros hexadecimales */
 	for (i = counter - 1; i >= 0; i--)
 	{
 		if (array[i] > 9)
-			array[i] = array[i] + 7;
-		_putchar(array[i] + '0');
+			array[i] = array[i] + 7; /**Convierte con ASCII*/
+		_putchar(array[i] + '0'); /**printea los numeros*/
 	}
 	free(array);
 	return (counter);
