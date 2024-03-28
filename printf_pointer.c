@@ -16,13 +16,14 @@ int printf_pointer(va_list val)
 	p = va_arg(val, void*);
 	if (p == NULL)
 	{
+		/** imprime cada character del string */
 		for (i = 0; s[i] != '\0'; i++)
 		{
 			_putchar(s[i]);
 		}
 		return (i);
 	}
-
+	/** convierte pointer a long int para buscar su representacion hexadecimal */
 	a = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');

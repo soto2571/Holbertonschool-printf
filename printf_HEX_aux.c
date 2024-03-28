@@ -12,6 +12,7 @@ int printf_HEX_aux(unsigned int num)
 	int counter = 0;
 	unsigned int temp = num;
 
+	/** cuenta el numero de hexadecimales para representar el numero */
 	while (num / 16 != 0)
 	{
 		num /= 16;
@@ -20,11 +21,13 @@ int printf_HEX_aux(unsigned int num)
 	counter++;
 	array = malloc(counter * sizeof(int));
 
+	/** cuenta  el numero de digitos hexadecimales necesitados */
 	for (i = 0; i < counter; i++)
 	{
 		array[i] = temp % 16;
 		temp /= 16;
 	}
+	/** imprime el digito hexadecimal guardado en el array en reversa */
 	for (i = counter - 1; i >= 0; i--)
 	{
 		if (array[i] > 9)

@@ -6,7 +6,8 @@
  */
 int _printf(const char * const format, ...)
 {
-	convert_match m[] = {
+/** array de estrcuturas que mapean especificadores de formato con funciones */
+		convert_match m[] = {
 		{"%s", printf_string}, {"%c", printf_char},
 		{"%%", printf_37},
 		{"%i", printf_int}, {"%d", printf_dec}, {"%r", printf_srev},
@@ -15,10 +16,11 @@ int _printf(const char * const format, ...)
 		{"%S", printf_exclusive_string}, {"%p", printf_pointer}
 	};
 
-	va_list args;
+	va_list args; /** lista de argumentos variables */
 	int i = 0, j, len = 0;
 
 	va_start(args, format);
+	/** verificaction de casos especiales */
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
 

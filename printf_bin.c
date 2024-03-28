@@ -13,6 +13,7 @@ int printf_bin(va_list val)
 	unsigned int num = va_arg(val, unsigned int);
 	unsigned int p;
 
+	/** iteracion sobre los 32 bits */
 	for (i = 0; i < 32; i++)
 	{
 		p = ((a << (31 - i)) & num);
@@ -25,10 +26,10 @@ int printf_bin(va_list val)
 			cont++;
 		}
 	}
-	if (cont == 0)
+	if (cont == 0) /** si el numero es 0, se imprime un solo digito */
 	{
 		cont++;
 		_putchar('0');
 	}
-	return (cont);
+	return (cont); /** se retorna el num total de digitos binarios */
 }

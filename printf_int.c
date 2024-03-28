@@ -13,6 +13,7 @@ int printf_int(va_list args)
 	n = n / 10;
 	num = n;
 
+	/** trabaja con numeros negativos */
 	if (last < 0)
 	{
 		_putchar('-');
@@ -39,7 +40,7 @@ int printf_int(va_list args)
 		}
 	}
 	_putchar(last + '0');
-
+	/* retorna la cantidad de numeros imprimidos */
 	return (i);
 }
 

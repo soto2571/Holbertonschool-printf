@@ -13,6 +13,7 @@ int printf_rot13(va_list args)
 	char alpha[] = {"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"};
 	char beta[] = {"nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"};
 
+	/** si el string es NULL, asignala a "(NULL)" */
 	if (s == NULL)
 		s = "(null)";
 	for (i = 0; s[i]; i++)
