@@ -34,7 +34,7 @@ while (format[i] != '\0')
 		{
 			len += m[j].f(args);
 			i = i + 2;
-			
+
 			goto Here;
 
 		}
